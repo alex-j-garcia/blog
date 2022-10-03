@@ -1,9 +1,6 @@
 import React, {useContext} from 'react';
 import { ThemeContext } from '../../ThemeContext';
 import './Main.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
 
 function Main() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -19,10 +16,9 @@ function Main() {
 function Button({ theme, handleClick }) {
   return (
     <button onClick={handleClick}>
-      {
-        theme === 'dark' ?
-          <FontAwesomeIcon icon={faSun} /> :
-          <FontAwesomeIcon icon={faMoon} />
+      {theme === 'dark' ?
+        <i class="ri-sun-line"></i> :
+        <i class="ri-moon-line"></i>
       }
     </button>
   );
