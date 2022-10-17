@@ -9,15 +9,19 @@ export default function Menu() {
     ['blog', 'bookmark'],
     ['portfolio', 'briefcase']
   ];
-  
-  const menuItems = menuConfig.map(([item, icon]) => (
-    <li className="Menu-item">
-      <div className="Menu-item-container">
-        <i class={`ri-${icon}-line`}></i>
-        <Link to={`/${item === 'home' ? '' : item}`}>{item}</Link>
-      </div>
-    </li>
-  ));
+
+  const menuItems = menuConfig.map((menuItem, index) => {
+    const [item, icon] = menuItem;
+
+    return (
+      <li key={index} className="Menu-item">
+        <div className="Menu-item-container">
+          <i class={`ri-${icon}-line`}></i>
+          <Link to={`/${item === 'home' ? '' : item}`}>{item}</Link>
+        </div>
+      </li>
+    );
+  });
 
   return (
     <nav className="Menu">
