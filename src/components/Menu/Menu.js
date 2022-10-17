@@ -16,7 +16,7 @@ export default function Menu() {
     return (
       <li key={index} className="Menu-item">
         <div className="Menu-item-container">
-          <i class={`ri-${icon}-line`}></i>
+          <i className={`ri-${icon}-line`}></i>
           <Link to={`/${item === 'home' ? '' : item}`}>{item}</Link>
         </div>
       </li>
