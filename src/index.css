@@ -15,3 +15,11 @@ html {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+
+.dark-theme {
+  background-color: purple;
+}
+
+.light-theme {
+  background-color: aquamarine;
+}

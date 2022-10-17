@@ -8,11 +8,10 @@ import Portfolio from '../../pages/Portfolio';
 import './Main.css';
 
 export default function Main() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
 
   return (
     <main className={`${theme}-theme`}>
-      <Button theme={theme} handleClick={toggleTheme} />
       <Switch>
         <Route path='/blog'>
           <Blog />
@@ -29,16 +28,5 @@ export default function Main() {
 
       <Menu />
     </main>
-  );
-}
-
-function Button({ theme, handleClick }) {
-  return (
-    <button onClick={handleClick}>
-      {theme === 'dark' ?
-        <i className="ri-sun-line"></i> :
-        <i className="ri-moon-line"></i>
-      }
-    </button>
   );
 }

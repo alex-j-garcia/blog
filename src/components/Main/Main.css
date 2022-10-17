@@ -1,9 +1,5 @@
-.dark-theme {
-  background-color: purple;
-}
-
-.light-theme {
-  background-color: aquamarine;
+main {
+  height: 100vh;
 }
 
 button {
