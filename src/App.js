@@ -1,34 +1,14 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom'
-import './App.css';
-import Main from './components/Main/Main';
-import Menu from './components/Menu/Menu'
-import Blog from './pages/Blog';
-import Portfolio from './pages/Portfolio'
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeContextProvider } from './ThemeContext';
+import Main from './components/Main/Main';
+import './App.css';
 
 export default function App() {
   return (
     <Router>
       <ThemeContextProvider>
-        <Menu />
-        <Switch>
-          <Route path='/blog'>
-            <Blog />
-          </Route>
-
-          <Route path='/portfolio'>
-            <Portfolio />
-          </Route>
-
-          <Route path="/">
-            <Main />
-          </Route>
-        </Switch>
+        <Main />
       </ThemeContextProvider>
     </Router>
   );
