@@ -1,18 +1,15 @@
 import React from 'react';
-import {
-  Routes,
-  Route,
-  Link,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Menu.css';
 import 'remixicon/fonts/remixicon.css';
 
-function Menu() {
+export default function Menu() {
   const menuConfig = [
     ['home', 'home'],
     ['blog', 'bookmark'],
     ['portfolio', 'briefcase']
   ];
+  
   const menuItems = menuConfig.map(([item, icon]) => (
     <li className="Menu-item">
       <div className="Menu-item-container">
@@ -30,5 +27,3 @@ function Menu() {
     </nav>
   );
 }
-
-export default Menu;

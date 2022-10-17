@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { ThemeContext } from '../../ThemeContext';
 import './Main.css'
 
-function Main() {
+export default function Main() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
@@ -23,5 +23,3 @@ function Button({ theme, handleClick }) {
     </button>
   );
 }
-
-export default Main;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route,
 } from 'react-router-dom'
 import './App.css';
@@ -11,19 +11,25 @@ import Blog from './pages/Blog';
 import Portfolio from './pages/Portfolio'
 import { ThemeContextProvider } from './ThemeContext';
 
-function App() {
+export default function App() {
   return (
     <Router>
       <ThemeContextProvider>
         <Menu />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path='/blog' element={<Blog />}></Route>
-          <Route path='/portfolio' element={<Portfolio />}></Route>
-        </Routes>
+        <Switch>
+          <Route path='/blog'>
+            <Blog />
+          </Route>
+
+          <Route path='/portfolio'>
+            <Portfolio />
+          </Route>
+
+          <Route path="/">
+            <Main />
+          </Route>
+        </Switch>
       </ThemeContextProvider>
     </Router>
   );
 }
-
-export default App;
