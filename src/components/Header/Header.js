@@ -6,7 +6,7 @@ export default function Header() {
   const {theme, toggleTheme} = useContext(ThemeContext);
 
   return (
-    <header className={`${theme}-theme`}>
+    <header>
       <Button theme={theme} handleClick={toggleTheme} />
     </header>
   );
@@ -14,10 +14,10 @@ export default function Header() {
 
 function Button({ theme, handleClick }) {
   return (
-    <button onClick={handleClick}>
+    <button className={`switchTheme ${theme}-theme`} onClick={handleClick}>
       {theme === 'dark' ?
-        <i className="ri-sun-line"></i> :
-        <i className="ri-moon-line"></i>
+        <i className='ri-sun-line'></i> :
+        <i className='ri-moon-line'></i>
       }
     </button>
   );

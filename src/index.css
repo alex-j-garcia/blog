@@ -11,15 +11,17 @@ html {
   box-sizing: inherit;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
+h1, h2, h3, h4, h5, h6,
+p, a {
+  font-family: sans-serif;
+}
 
 .dark-theme {
-  background-color: purple;
+  background-color: hsl(0, 0%, 4%);
+  color:hsl(0, 0%, 96%);
 }
 
 .light-theme {
-  background-color: aquamarine;
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(0, 0%, 4%);
 }

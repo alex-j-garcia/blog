@@ -1,26 +1,9 @@
 main {
   height: 100vh;
+
 }
 
-button {
-  position: relative;
-  margin: 2rem;
-  padding: 5px;
-  border: 1px solid hsl(300, 53%, 18%);
-  box-shadow: 2px 1px 0 1px hsl(300, 16%, 51%),
-              3px 2px 0 2px hsl(300, 16%, 51%),
-              4px 3px 0 3px hsl(300, 16%, 51%);
-
-  color: hsl(300, 81%, 10%);
-  background-color: hsl(300, 14%, 77%);
-  border-radius: 5px;
-  font-size: 1.8rem;
-  width: 40px;
-}
-
-button:active {
-  box-shadow: inset -2px 0px 4px hsla(0, 0%, 0%, 0.6);
-  border: none;
-  top: 4px;
-  left: 4px;
+main > .container {
+  width: 90%;
+  margin: 0 auto;
 }

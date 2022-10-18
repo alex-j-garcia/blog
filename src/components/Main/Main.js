@@ -1,6 +1,7 @@
 import {useContext} from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ThemeContext } from '../../ThemeContext';
+import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
 import About from '../About/About';
 import Blog from '../../pages/Blog';
@@ -12,21 +13,25 @@ export default function Main() {
 
   return (
     <main className={`${theme}-theme`}>
-      <Switch>
-        <Route path='/blog'>
-          <Blog />
-        </Route>
+      <div className='container'>
+        <Header />
 
-        <Route path='/portfolio'>
-          <Portfolio />
-        </Route>
+        <Switch>
+          <Route path='/blog'>
+            <Blog />
+          </Route>
 
-        <Route path="/">
-          <About />
-        </Route>
-      </Switch>
+          <Route path='/portfolio'>
+            <Portfolio />
+          </Route>
 
-      <Menu />
+          <Route path='/'>
+            <About />
+          </Route>
+        </Switch>
+
+        <Menu />
+      </div>
     </main>
   );
 }

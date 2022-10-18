@@ -13,8 +13,8 @@ export default function Menu() {
     const [item, icon] = menuItem;
 
     return (
-      <li key={index} className="Menu-item">
-        <div className="Menu-item-container">
+      <li key={index} className='Menu-item'>
+        <div className='Menu-item-container'>
           <i className={`ri-${icon}-line`}></i>
           <Link to={`/${item === 'home' ? '' : item}`}>{item}</Link>
         </div>
@@ -23,7 +23,7 @@ export default function Menu() {
   });
 
   return (
-    <nav className="Menu">
+    <nav className='Menu'>
       <ul>
         {menuItems}
       </ul>
