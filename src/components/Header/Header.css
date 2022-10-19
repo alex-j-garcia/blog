@@ -5,9 +5,19 @@ header {
   padding: 20px 0;
 }
 
-.switchTheme {
+header > button {
   padding: 10px;
   background: none;
   border-radius: 50%;
   font-size: 1.8rem;
+}
+
+.dark-theme button {
+  background-color: hsl(0, 0%, 4%);
+  color:hsl(0, 0%, 96%);
+}
+
+.light-theme button {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(0, 0%, 4%);
 }

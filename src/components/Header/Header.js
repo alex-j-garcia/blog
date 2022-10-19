@@ -1,5 +1,6 @@
 import {useContext} from 'react';
-import { ThemeContext } from '../../ThemeContext';
+import {ThemeContext} from '../../ThemeContext';
+import Button from '../Button/Button'
 import './Header.css'
 
 export default function Header() {
@@ -7,18 +8,12 @@ export default function Header() {
 
   return (
     <header>
-      <Button theme={theme} handleClick={toggleTheme} />
+      <Button onClick={toggleTheme}>
+        {theme === 'dark' ?
+          <i className='ri-sun-line'></i> :
+          <i className='ri-moon-line'></i>
+        }
+      </Button>
     </header>
-  );
-}
-
-function Button({ theme, handleClick }) {
-  return (
-    <button className={`switchTheme ${theme}-theme`} onClick={handleClick}>
-      {theme === 'dark' ?
-        <i className='ri-sun-line'></i> :
-        <i className='ri-moon-line'></i>
-      }
-    </button>
   );
 }
