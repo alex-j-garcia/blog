@@ -25,3 +25,24 @@ p, a {
   background-color: hsl(0, 0%, 96%);
   color: hsl(0, 0%, 4%);
 }
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.light-theme a {
+  color: hsl(0, 0%, 4%);
+}
+
+.dark-theme a {
+  color:hsl(0, 0%, 96%);
+}
+
+a:hover {
+  cursor: pointer;
+}

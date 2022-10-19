@@ -4,9 +4,9 @@ import 'remixicon/fonts/remixicon.css';
 
 export default function Menu() {
   const menuConfig = [
-    ['home', 'home'],
-    ['blog', 'bookmark'],
-    ['portfolio', 'briefcase']
+    ['Home', 'home'],
+    ['Blog', 'bookmark'],
+    ['Portfolio', 'briefcase']
   ];
 
   const menuItems = menuConfig.map((menuItem, index) => {
@@ -14,10 +14,10 @@ export default function Menu() {
 
     return (
       <li key={index} className='Menu-item'>
-        <div className='Menu-item-container'>
+        <Link to={`/${item === 'home' ? '' : item}`}>
           <i className={`ri-${icon}-line`}></i>
-          <Link to={`/${item === 'home' ? '' : item}`}>{item}</Link>
-        </div>
+          <span>{item}</span>
+        </Link>
       </li>
     );
   });

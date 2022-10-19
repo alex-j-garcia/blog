@@ -12,17 +12,29 @@ export default function About() {
       <p>I don't have many socials, but you can keep up with me in limited capacity here:</p>
       <ul>
         <li>
-          <a href='https://github.com/alex-j-garcia'>
+          <a
+            href='https://github.com/alex-j-garcia'
+            target='_blank'
+            rel='noreferrer'
+          >
             GitHub
           </a>
         </li>
         <li>
-          <a href='https://oku.club/user/losingsleep/'>
-            Oku (books I've read/am reading)
+          <a
+            href='https://oku.club/user/losingsleep/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Oku (books I've read)
           </a>
         </li>
         <li>
-          <a href='mailto:alexdominguez@fastmail.com'>
+          <a
+            href='mailto:alexdominguez@fastmail.com'
+            target='_blank'
+            rel='noreferrer'
+          >
             Email
           </a>
         </li>
