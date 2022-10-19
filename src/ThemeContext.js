@@ -1,9 +1,9 @@
-import React, { useState, createContext } from 'react';
+import {useState, createContext} from 'react';
 
 const ThemeContext = createContext();
 
-function ThemeContextProvider(props) {
-  const [ theme, setTheme ] = useState('light');
+function ThemeContextProvider({children}) {
+  const [theme, setTheme] = useState('light');
 
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
@@ -14,7 +14,7 @@ function ThemeContextProvider(props) {
       theme,
       toggleTheme,
     }}>
-      {props.children}
+      {children}
     </ThemeContext.Provider>
   );
 }
