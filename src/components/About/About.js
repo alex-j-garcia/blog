@@ -9,10 +9,22 @@ export default function About() {
         site is used to chronicle my journey as a budding front end developer.
         I use JavaScript to build tools that are useful in my day to day.
       </p>
-      <p>I don't have many socials, but you can keep up with me here:</p>
+      <p>I don't have many socials, but you can keep up with me in limited capacity here:</p>
       <ul>
         <li>
-          <a href='https://github.com/alex-j-garcia'>GitHub</a>
+          <a href='https://github.com/alex-j-garcia'>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href='https://oku.club/user/losingsleep/'>
+            Oku (books I've read/am reading)
+          </a>
+        </li>
+        <li>
+          <a href='mailto:alexdominguez@fastmail.com'>
+            Email
+          </a>
         </li>
       </ul>
     </section>
