@@ -37,6 +37,11 @@
     align-items: center;
 }
 
+.Menu-item i {
+    margin-bottom: 3px;
+}
+
 .dark-theme .Menu-item > a {
     color: hsl(0, 0%, 0%);
 }
+

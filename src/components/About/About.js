@@ -31,6 +31,15 @@ export default function About() {
         </li>
         <li>
           <a
+            href='https://www.codewars.com/users/losingsleep'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Codewars (coding challenges)
+          </a>
+        </li>
+        <li>
+          <a
             href='mailto:alexdominguez@fastmail.com'
             target='_blank'
             rel='noreferrer'
