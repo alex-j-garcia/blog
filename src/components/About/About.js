@@ -11,43 +11,33 @@ export default function About() {
       </p>
       <p>I don't have many socials, but you can keep up with me in limited capacity here:</p>
       <ul>
-        <li>
-          <a
-            href='https://github.com/alex-j-garcia'
-            target='_blank'
-            rel='noreferrer'
-          >
-            GitHub
-          </a>
-        </li>
-        <li>
-          <a
-            href='https://oku.club/user/losingsleep/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Oku (books I've read)
-          </a>
-        </li>
-        <li>
-          <a
-            href='https://www.codewars.com/users/losingsleep'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Codewars (coding challenges)
-          </a>
-        </li>
-        <li>
-          <a
-            href='mailto:alexdominguez@fastmail.com'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Email
-          </a>
-        </li>
+        {LINKS.map((link) => (
+          <li>
+            <a href={link.url} target='_blank' rel='noreferrer'>
+              {link.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   );
 }
+
+const LINKS = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/alex-j-garcia'
+  },
+  {
+    name: `Oku (books I've read)`,
+    url: 'https://oku.club/user/losingsleep/'
+  },
+  {
+    name: 'Codewars (coding challenges)',
+    url: 'https://www.codewars.com/users/losingsleep'
+  },
+  {
+    name: 'Email',
+    url: 'mailto:alexdominguez@fastmail.com'
+  },
+]
