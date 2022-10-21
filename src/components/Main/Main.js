@@ -6,6 +6,7 @@ import Menu from '../Menu/Menu';
 import About from '../About/About';
 import Blog from '../../pages/Blog';
 import Portfolio from '../../pages/Portfolio';
+import Snippets from '../Snippets/Snippets';
 import './Main.css';
 
 export default function Main() {
@@ -23,6 +24,10 @@ export default function Main() {
 
           <Route path='/portfolio'>
             <Portfolio />
+          </Route>
+
+          <Route path='/snippets'>
+            <Snippets />
           </Route>
 
           <Route path='/'>

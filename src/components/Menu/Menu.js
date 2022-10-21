@@ -1,31 +1,16 @@
-import { Link, useLocation } from 'react-router-dom';
+import NavLink from '../NavLink/NavLink';
 import './Menu.css';
 import 'remixicon/fonts/remixicon.css';
 
 export default function Menu() {
-  const {pathname} = useLocation();
-
-  const menuConfig = [
-    ['Home', 'home'],
-    ['Blog', 'bookmark'],
-    ['Portfolio', 'briefcase']
-  ];
-
-  const menuItems = menuConfig.map(([item, icon], index) => {
-    const isCurrent = item === pathname.slice(1) || (pathname === '/' && item == 'Home');
-    return (
-      <li key={index} className='Menu-item'>
-        <Link
-          to={`/${item === 'Home' ? '' : item}`}
-          className={isCurrent ? 'current' : null}
-          aria-current={isCurrent ? 'page' : null}
-        >
-          <i className={`ri-${icon}-line`}></i>
-          <span>{item}</span>
-        </Link>
-      </li>
-    );
-  });
+  const menuItems = PAGES.map(({page, icon}, index) => (
+    <li key={index} className='Menu-item'>
+      <NavLink page={page}>
+        <i className={`ri-${icon}-line`}></i>
+        <span>{page}</span>
+      </NavLink>
+    </li>
+  ));
 
   return (
     <nav className='Menu'>
@@ -35,3 +20,22 @@ export default function Menu() {
     </nav>
   );
 }
+
+const PAGES = [
+  {
+    page: 'home',
+    icon: 'home',
+  },
+  {
+    page: 'blog',
+    icon: 'bookmark',
+  },
+  {
+    page: 'portfolio',
+    icon: 'bookmark',
+  },
+  {
+    page: 'snippets',
+    icon: 'code',
+  },
+];
