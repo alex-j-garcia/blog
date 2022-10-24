@@ -47,6 +47,7 @@
     color: hsl(0, 0%, 0%);
 }
 
-a.current {
+a.current,
+.dark-theme a.current {
     color: hsl(239, 61%, 57%);
 }

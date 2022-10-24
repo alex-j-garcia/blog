@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import { useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ThemeContext } from '../../ThemeContext';
 import Header from '../Header/Header';
@@ -10,7 +10,7 @@ import Snippets from '../Snippets/Snippets';
 import './Main.css';
 
 export default function Main() {
-  const {theme} = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <main className={`${theme}-theme`}>

@@ -1,14 +1,10 @@
 import NavLink from '../NavLink/NavLink';
 import './Menu.css';
-import 'remixicon/fonts/remixicon.css';
 
 export default function Menu() {
-  const menuItems = PAGES.map(({page, icon}, index) => (
+  const menuItems = PAGES.map((page, index) => (
     <li key={index} className='Menu-item'>
-      <NavLink page={page}>
-        <i className={`ri-${icon}-line`}></i>
-        <span>{page}</span>
-      </NavLink>
+      <NavLink page={page} />
     </li>
   ));
 
@@ -23,19 +19,19 @@ export default function Menu() {
 
 const PAGES = [
   {
-    page: 'home',
+    title: 'home',
     icon: 'home',
   },
   {
-    page: 'blog',
+    title: 'blog',
     icon: 'bookmark',
   },
   {
-    page: 'portfolio',
+    title: 'portfolio',
     icon: 'bookmark',
   },
   {
-    page: 'snippets',
+    title: 'snippets',
     icon: 'code',
   },
 ];

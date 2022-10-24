@@ -1,4 +1,22 @@
-import {Link, useLocation} from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import 'remixicon/fonts/remixicon.css';
+
+export default function NavLink({ page }) {
+  const { pathname } = useLocation();
+  const { title, icon } = page;
+  const isCurrent = isCurrentPage(title, pathname);
+
+  return (
+    <Link
+      to={getPath(title)}
+      className={isCurrent ? 'current' : null}
+      aria-current={isCurrent ? 'page' : null}
+    >
+      <i className={`ri-${icon}-line`}></i>
+      <span>{title}</span>
+    </Link>
+  );
+}
 
 function isCurrentPage(page, pathname) {
   if (pathname === '/' && page === 'home') {
@@ -14,35 +32,4 @@ function isCurrentPage(page, pathname) {
 
 function getPath(page) {
   return page === 'home' ? '/' : `/${page}`;
-}
-
-export default function NavLink({page, children}) {
-  const {pathname} = useLocation();
-  const isCurrent = isCurrentPage(page, pathname);
-
-  if (isCurrent) {
-    return <CurrentLink page={page}>{children}</CurrentLink>
-  }
-
-  return <IdleLink page={page}>{children}</IdleLink>
-}
-
-function CurrentLink({page, children}) {
-  return (
-    <Link 
-        to={getPath(page)}
-        className='current'
-        aria-current='page'
-      >
-      {children}
-    </Link>
-  )
-}
-
-function IdleLink({page, children}) {
-  return (
-    <Link to={getPath(page)}>
-      {children}
-    </Link>
-  );
 }

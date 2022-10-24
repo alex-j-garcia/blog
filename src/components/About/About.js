@@ -11,8 +11,8 @@ export default function About() {
       </p>
       <p>I don't have many socials, but you can keep up with me in limited capacity here:</p>
       <ul>
-        {LINKS.map((link) => (
-          <li>
+        {LINKS.map((link, index) => (
+          <li key={index}>
             <a href={link.url} target='_blank' rel='noreferrer'>
               {link.name}
             </a>
