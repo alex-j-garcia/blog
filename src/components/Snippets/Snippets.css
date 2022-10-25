@@ -1,0 +1,15 @@
+.snippets h2 {
+  margin-bottom: 1rem;
+}
+
+h1 + p {
+  margin-bottom: 2rem;
+}
+
+.snippets p {
+  margin-bottom: 2rem;
+}
+
+code::selection {
+  background-color: hsla(239, 61%, 57%, 0.3);
+}
