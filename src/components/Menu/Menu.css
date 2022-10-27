@@ -30,6 +30,7 @@
 
 .Menu-item a {
     font-size: 1.4rem;
+    border-bottom: none;
 }
 
 .Menu-item > a {

@@ -7,6 +7,7 @@ import About from '../About/About';
 import Blog from '../../pages/Blog';
 import Portfolio from '../../pages/Portfolio';
 import Snippets from '../Snippets/Snippets';
+import NotFound from '../NotFound/NotFound';
 import './Main.css';
 
 export default function Main() {
@@ -18,6 +19,10 @@ export default function Main() {
         <Header />
 
         <Switch>
+          <Route exact path='/'>
+            <About />
+          </Route>
+
           <Route path='/blog'>
             <Blog />
           </Route>
@@ -30,8 +35,8 @@ export default function Main() {
             <Snippets />
           </Route>
 
-          <Route path='/'>
-            <About />
+          <Route path='*'>
+            <NotFound />
           </Route>
         </Switch>
 

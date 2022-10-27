@@ -1,20 +1,7 @@
-.about {
-  line-height: 1.5;
-}
-
-.about h1 {
-  font-size: 3rem;
-  margin: 30px 0;
-}
-
 .about p {
   margin-bottom: 15px;
 }
 
 .about li {
   margin-bottom: 5px;
-}
-
-.about a {
-  border-bottom: 3px solid hsl(208, 91%, 55%);
 }

@@ -1,3 +1,7 @@
 export default function Blog() {
-  return (<h1>Blog</h1>)
+  return (
+    <section className='Blog'>
+      <h1>Blog</h1>
+    </section>
+  );
 }
