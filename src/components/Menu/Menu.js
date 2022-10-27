@@ -23,11 +23,11 @@ const PAGES = [
     icon: 'home',
   },
   {
-    title: 'blog',
-    icon: 'bookmark',
+    title: 'portfolio',
+    icon: 'briefcase',
   },
   {
-    title: 'portfolio',
+    title: 'blog',
     icon: 'bookmark',
   },
   {
