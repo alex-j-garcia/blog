@@ -39,9 +39,8 @@ export default function Main() {
             <NotFound />
           </Route>
         </Switch>
-
-        <Menu />
       </div>
+      <Menu />
     </main>
   );
 }
