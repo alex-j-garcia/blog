@@ -28,10 +28,11 @@ const SNIPPETS = [
       const regex = /[-_][a-z]/gi;
       const string = 'camel-case-me';
 
+      // 'camelCaseMe'
       console.log(string.replace(
         regex,
         match => match.slice(1).toUpperCase()
-      )) // 'camelCaseMe'
+      ));
     `,
   },
 ];
