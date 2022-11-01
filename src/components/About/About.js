@@ -1,3 +1,4 @@
+import SocialsList from '../SocialsList/SocialsList';
 import './About.css';
 
 export default function About() {
@@ -11,15 +12,7 @@ export default function About() {
           I use JavaScript to build tools that are useful in my day to day.
         </p>
         <p>I don't have many socials, but you can keep up with me in limited capacity here:</p>
-        <ul>
-          {LINKS.map((link, index) => (
-            <li key={index}>
-              <a href={link.url} target='_blank' rel='noreferrer'>
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <SocialsList />
       </section>
       <section className='recent-articles'>
         <h2>Recent Articles</h2>
@@ -27,22 +20,3 @@ export default function About() {
     </>
   );
 }
-
-const LINKS = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/alex-j-garcia'
-  },
-  {
-    name: `Oku (books I've read)`,
-    url: 'https://oku.club/user/losingsleep/'
-  },
-  {
-    name: 'Codewars (coding challenges)',
-    url: 'https://www.codewars.com/users/losingsleep'
-  },
-  {
-    name: 'Email',
-    url: 'mailto:alexdominguez@fastmail.com'
-  },
-]

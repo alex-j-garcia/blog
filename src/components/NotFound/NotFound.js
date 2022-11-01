@@ -7,13 +7,31 @@ export default function NotFound() {
       <h1>404 - Page Not Found</h1>
       <p>Oops! That page doesn't exist. You may have been looking for:</p>
       <ul>
-        <li>
-          <Link to='/'>Home</Link>
-        </li>
-        <li>
-          <Link to='/blog'>Blog</Link>
-        </li>
+        {PAGES.map(({ title, path }, index) => (
+          <li key={index}>
+            <Link to={path}>{title}</Link>
+          </li>
+        ))}
       </ul>
     </section>
   );
 }
+
+const PAGES = [
+  {
+    title: 'Home',
+    path: '/',
+  },
+  {
+    title: 'Portfolio',
+    path: '/portfolio',
+  },
+  {
+    title: 'Blog',
+    path: '/blog',
+  },
+  {
+    title: 'Snippets',
+    path: '/snippets',
+  },
+];
