@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import LinksList from '../common/components/LinksList';
 import './NotFound.css';
 
 export default function NotFound() {
@@ -6,13 +6,7 @@ export default function NotFound() {
     <section className='NotFound'>
       <h1>404 - Page Not Found</h1>
       <p>Oops! That page doesn't exist. You may have been looking for:</p>
-      <ul>
-        {PAGES.map(({ title, path }, index) => (
-          <li key={index}>
-            <Link to={path}>{title}</Link>
-          </li>
-        ))}
-      </ul>
+      <LinksList list={PAGES} />
     </section>
   );
 }
@@ -20,18 +14,18 @@ export default function NotFound() {
 const PAGES = [
   {
     title: 'Home',
-    path: '/',
+    urlOrPath: '/',
   },
   {
     title: 'Portfolio',
-    path: '/portfolio',
+    urlOrPath: '/portfolio',
   },
   {
     title: 'Blog',
-    path: '/blog',
+    urlOrPath: '/blog',
   },
   {
     title: 'Snippets',
-    path: '/snippets',
+    urlOrPath: '/snippets',
   },
 ];
