@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { ThemeContext } from '../../ThemeContext';
-import Header from '../Header/Header';
-import Menu from '../Menu/Menu';
-import About from '../About/About';
+import Header from '../Header';
+import Menu from '../Menu';
+import About from '../About';
+import Snippets from '../Snippets';
+import NotFound from '../NotFound';
 import Blog from '../../pages/Blog';
 import Portfolio from '../../pages/Portfolio';
-import Snippets from '../Snippets/Snippets';
-import NotFound from '../NotFound/NotFound';
 import './Main.css';
 
 export default function Main() {
