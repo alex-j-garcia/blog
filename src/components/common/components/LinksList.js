@@ -1,13 +1,14 @@
-import { Link } from 'react-router-dom';
+import ExternalLink from './ExternalLink';
+import InternalLink from './InternalLink';
 
 export default function LinksList({ list, isExternal = false }) {
   return (
     <ul>
-      {list.map(({ title, urlOrPath }, index) => (
+      {list.map((link, index) => (
         <li key={index}>
           {isExternal ? 
-            <a href={urlOrPath} target='_blank' rel='noreferrer'>{title}</a> :
-            <Link to={urlOrPath}>{title}</Link>
+            <ExternalLink link={link} /> :
+            <InternalLink link={link} />
           }
         </li>
       ))}

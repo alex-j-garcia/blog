@@ -28,27 +28,24 @@
     width: 100%;
 }
 
-.Menu-item a {
+.Menu a {
     font-size: 1.4rem;
     border-bottom: none;
-}
-
-.Menu-item > a {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-transform: capitalize;
 }
 
-.Menu-item i {
+.Menu i {
     margin-bottom: 3px;
 }
 
-.dark-theme .Menu-item > a {
+.dark-theme .Menu a {
     color: hsl(0, 0%, 0%);
 }
 
-a.current,
-.dark-theme a.current {
+a[aria-current='page'],
+.dark-theme a[aria-current='page'] {
     color: hsl(239, 61%, 54%);
 }

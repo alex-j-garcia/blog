@@ -4,7 +4,7 @@ export default function MenuItems() {
   return (
     <ul>
       {PAGES.map((page, index) => (
-        <li key={index} className='Menu-item'>
+        <li key={index}>
           <NavLink page={page} />
         </li>
       ))}
@@ -15,18 +15,22 @@ export default function MenuItems() {
 const PAGES = [
   {
     title: 'home',
+    urlOrPath: '/',
     icon: 'home',
   },
   {
     title: 'portfolio',
+    urlOrPath: '/portfolio',
     icon: 'briefcase',
   },
   {
     title: 'blog',
+    urlOrPath: '/blog',
     icon: 'bookmark',
   },
   {
     title: 'snippets',
+    urlOrPath: '/snippets',
     icon: 'code',
   },
 ];
