@@ -1,4 +1,4 @@
-import SnippetsList from '../SnippetsList/SnippetsList';
+import SnippetsList from './components/SnippetsList';
 import './Snippets.css';
 
 export default function Snippets() {

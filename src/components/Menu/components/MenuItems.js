@@ -1,4 +1,4 @@
-import NavLink from '../NavLink/NavLink';
+import NavLink from '../../NavLink/NavLink';
 
 export default function MenuItems() {
   return (

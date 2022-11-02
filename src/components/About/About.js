@@ -1,4 +1,4 @@
-import SocialsList from '../SocialsList/SocialsList';
+import SocialsList from './components/SocialsList';
 import './About.css';
 
 export default function About() {
