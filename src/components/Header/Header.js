@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../ThemeContext';
-import Button from '../Button/Button'
+import Button from '../Button';
+import DarkThemeIcon from './components/DarkThemeIcon';
+import LightThemeIcon from './components/LightThemeIcon';
 import './Header.css'
 
 export default function Header() {
@@ -9,10 +11,7 @@ export default function Header() {
   return (
     <header>
       <Button onClick={toggleTheme}>
-        {theme === 'dark' ?
-          <i className='ri-sun-line'></i> :
-          <i className='ri-moon-line'></i>
-        }
+        {theme === 'dark' ? <LightThemeIcon /> : <DarkThemeIcon />}
       </Button>
     </header>
   );
