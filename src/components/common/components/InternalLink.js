@@ -1,5 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function InternalLink({ link }) {
-  return <Link to={link.urlOrPath}>{link.title}</Link>;
+  const { title, urlOrPath, icon } = link;
+  const { pathname } = useLocation();
+
+  return (
+    <Link
+      to={urlOrPath}
+      aria-current={pathname === urlOrPath ? 'page' : null}
+    >
+      {icon ? icon : null}
+      {title}
+    </Link>
+  );
 }
