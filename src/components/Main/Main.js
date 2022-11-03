@@ -6,8 +6,8 @@ import Menu from '../Menu';
 import About from '../About';
 import Snippets from '../Snippets';
 import NotFound from '../NotFound';
-import Blog from '../../pages/Blog';
-import Portfolio from '../../pages/Portfolio';
+import Blog from '../Blog';
+import Portfolio from '../Portfolio';
 import './Main.css';
 
 export default function Main() {
