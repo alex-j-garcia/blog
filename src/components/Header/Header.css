@@ -9,11 +9,10 @@ header > button {
   align-items: center;
   padding: 7px;
   background: none;
-  border: none;
+  border: 1px dotted;
   border-radius: 50%;
 
   font-size: 1.8rem;
-  outline: dotted;
 }
 
 header > button:hover {
