@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import { ThemeContextProvider } from './ThemeContext';
+import { ThemeContextProvider } from './components/common/components/ThemeContext';
 import Main from './components/Main/Main';
 import './App.css';
 

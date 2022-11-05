@@ -1,12 +1,11 @@
-import { useContext } from 'react';
-import { ThemeContext } from '../../ThemeContext';
+import useThemeContext from '../common/hooks/useThemeContext';
 import Button from '../Button';
 import DarkThemeIcon from './components/DarkThemeIcon';
 import LightThemeIcon from './components/LightThemeIcon';
 import './Header.css'
 
 export default function Header() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useThemeContext();
 
   return (
     <header>
