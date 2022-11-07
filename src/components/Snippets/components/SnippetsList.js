@@ -1,3 +1,5 @@
+import Code from '../../common/components/Code';
+
 export default function SnippetsList() {
   return (
     <div>
@@ -5,9 +7,7 @@ export default function SnippetsList() {
         <div key={index}>
           <h2>{heading}</h2>
           <p>{description}</p>
-          <pre>
-            <code>{code}</code>
-          </pre>
+          <Code code={code} language='javascript' />
         </div>
       ))}
     </div>
